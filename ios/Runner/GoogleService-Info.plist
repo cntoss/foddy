@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>728102917351-gdhe92qpqsftk5a2cfn7ufrrofcc8b17.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.728102917351-gdhe92qpqsftk5a2cfn7ufrrofcc8b17</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD8p1vNHqFPUlED4-KGsytfUnMp_uoFPzw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>728102917351</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.foody.foody</string>
+	<key>PROJECT_ID</key>
+	<string>foody-37bc0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>foody-37bc0.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:728102917351:ios:bfcfa0edce22350d107e42</string>
+	<key>DATABASE_URL</key>
+	<string>https://foody-37bc0-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
