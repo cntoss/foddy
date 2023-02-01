@@ -4,6 +4,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:foody/profile/widget/order_screen.dart';
 import 'package:foody/profile/widget/profile_product.dart';
 import 'package:foody/user/model/user_model.dart';
 import 'package:foody/user/ui/user_list_screen.dart';
@@ -173,7 +174,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   leadingIcon: Icons.local_shipping,
                   onPressed: () {
-                    // context.router.pushNamed(AppRoutes.orderHistoryPath);
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => const OrderScreen()));
                   },
                 ),
                 ProfileCard(
@@ -198,7 +200,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             builder: (_) => const ProfileProductsScreen()));
                   },
                 ),
-                ProfileCard(
+               /*  ProfileCard(
                   text: 'Users',
                   padding: 18,
                   trailing: Container(
@@ -219,7 +221,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         MaterialPageRoute(
                             builder: (_) => const UserListScreen()));
                   },
-                ),
+                ), */
               ]);
             } else {
               return Center(

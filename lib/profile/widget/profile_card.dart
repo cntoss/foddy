@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foody/core/static_color.dart';
 
 class ProfileCard extends StatefulWidget {
   const ProfileCard({
@@ -31,7 +32,7 @@ class _ProfileCard extends State<ProfileCard> {
             bottom: 8),
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(8)),
-          color: Colors.blue,
+          color: StaticColors.appColor,
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.05),
@@ -59,7 +60,7 @@ class _ProfileCard extends State<ProfileCard> {
               style: ThemeData().textTheme.headline1?.copyWith(
                   fontWeight: FontWeight.w600,
                   fontSize: 16,
-                  color: Colors.black),
+                  color: Colors.white),
             ),
             trailing: widget.trailing));
   }
