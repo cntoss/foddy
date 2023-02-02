@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:foody/common/app_constant.dart';
+import 'package:foody/presentation/checkout/payment_method.dart';
 import 'package:foody/user/model/user_model.dart';
 import 'package:foody/utils/toast.dart';
 
@@ -20,7 +21,8 @@ class CartScreen extends StatefulWidget {
 }
 
 class _CartScreenState extends State<CartScreen> {
-  List<String> selectedProducts = [];
+  List<String> selectedProductsIds = [];
+  List<ProductModel> selectedProducts = [];
   bool isLoading = false;
 
   @override
@@ -76,20 +78,26 @@ class _CartScreenState extends State<CartScreen> {
                                                 return ListTile(
                                                   isThreeLine: true,
                                                   leading: Checkbox(
-                                                      value: selectedProducts
+                                                      value: selectedProductsIds
                                                           .contains(
                                                               products[index]
                                                                   .id),
                                                       onChanged: (val) {
                                                         if (val == true) {
-                                                          selectedProducts.add(
-                                                              products[index]
+                                                          selectedProductsIds
+                                                              .add(products[
+                                                                      index]
                                                                   .id!);
+                                                          selectedProducts.add(
+                                                              products[index]);
                                                         } else {
-                                                          selectedProducts
+                                                          selectedProductsIds
                                                               .remove(products[
                                                                       index]
                                                                   .id!);
+                                                          selectedProducts
+                                                              .remove(products[
+                                                                  index]);
                                                         }
                                                         setState(() {});
                                                       }),
@@ -210,7 +218,7 @@ class _CartScreenState extends State<CartScreen> {
                                                 );
                                               }),
                                         ),
-                                        if (selectedProducts.isNotEmpty)
+                                        if (selectedProductsIds.isNotEmpty)
                                           Positioned(
                                             bottom: 0,
                                             child: Container(
@@ -236,12 +244,19 @@ class _CartScreenState extends State<CartScreen> {
                                                       String? mes =
                                                           await FirebaseHelper()
                                                               .checkout(
-                                                                  selectedProducts);
-                                                      showToast(
-                                                          mes ?? 'Success');
+                                                                  selectedProductsIds);
+                                                      /*  showToast(
+                                                          mes ?? 'Success'); */
                                                       setState(() {
                                                         isLoading = false;
                                                       });
+                                                      Navigator.push(
+                                                          context,
+                                                          MaterialPageRoute(
+                                                              builder: (_) =>
+                                                                  PaymentMethodScreen(
+                                                                      products:
+                                                                          selectedProducts)));
                                                     } catch (e) {
                                                       setState(() {
                                                         isLoading = false;

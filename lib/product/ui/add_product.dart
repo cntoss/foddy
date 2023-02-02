@@ -26,6 +26,8 @@ class _AddProductState extends State<AddProduct> {
   late TextEditingController _productName;
   late TextEditingController _productDescription;
   late TextEditingController _addressController;
+  late TextEditingController _restaurantNameController;
+
   late TextEditingController _priceController;
   bool isLoading = false;
   @override
@@ -37,6 +39,8 @@ class _AddProductState extends State<AddProduct> {
         text: widget.product != null ? widget.product!.description : null);
     _addressController = TextEditingController(
         text: widget.product != null ? widget.product!.location! : null);
+    _restaurantNameController = TextEditingController(
+        text: widget.product != null ? widget.product!.restaurantName! : null);
     _priceController = TextEditingController(
         text: widget.product != null ? widget.product!.price! : null);
     if (widget.product != null) {
@@ -183,6 +187,59 @@ class _AddProductState extends State<AddProduct> {
                                   ),
                             ),
                           ),
+                          //restaurantName
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 8.0),
+                            child: TextFormField(
+                              controller: _restaurantNameController,
+                              validator: (value) {
+                                if (value == null || value == '') {
+                                  return 'Enter restaurant name';
+                                } else {
+                                  return null;
+                                }
+                              },
+                              obscureText: false,
+                              maxLines: null,
+                              decoration: InputDecoration(
+                                labelText: 'Restaurant Name',
+                                hintText: 'Restaurant Name should be?',
+                                hintStyle: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1!
+                                    .copyWith(
+                                      fontFamily: 'Lexend Deca',
+                                      color: const Color(0xFF8B97A2),
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0xFFDBE2E7),
+                                    width: 1,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Color(0xFFDBE2E7),
+                                    width: 1,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                              ),
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyText1!
+                                  .copyWith(
+                                    fontFamily: 'Lexend Deca',
+                                    color: const Color(0xFF090F13),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+                            ),
+                          ),
+
                           //location
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: 8.0),
@@ -198,7 +255,7 @@ class _AddProductState extends State<AddProduct> {
                               obscureText: false,
                               maxLines: null,
                               decoration: InputDecoration(
-                                labelText: 'Location',
+                                labelText: 'Restaurant Location',
                                 hintText: 'Food available at...?',
                                 hintStyle: Theme.of(context)
                                     .textTheme

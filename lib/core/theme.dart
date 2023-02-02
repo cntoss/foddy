@@ -14,7 +14,7 @@ class LightTheme {
   static const Color backgroundColor = StaticColors.appColor;
   static const Color secondaryBackgroundColor = Color(0xFFFFFFFF);
   static const Color dividerColor = StaticColors.black5;
-  static const Color inputBackgroundColor = Color(0xFF354570);
+  static const Color inputBackgroundColor = Color.fromARGB(255, 170, 187, 234);
   static const Color checkboxColor = StaticColors.activeIcon;
   static const Color inputBorderColor = StaticColors.gray5;
 

@@ -117,7 +117,7 @@ class _ProductDetailWidgetState extends State<ProductDetailScreen> {
                               ],
                             ),
                           ),
-                          Padding(
+                         /*  Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 24, 4, 24, 0),
                             child: Row(
@@ -137,7 +137,7 @@ class _ProductDetailWidgetState extends State<ProductDetailScreen> {
                                 ),
                               ],
                             ),
-                          ),
+                          ), */
                           Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 24, 16, 24, 0),
@@ -161,7 +161,7 @@ class _ProductDetailWidgetState extends State<ProductDetailScreen> {
                               ],
                             ),
                           ),
-                          Padding(
+                          /*     Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 24, 24, 24, 0),
                             child: Row(
@@ -198,7 +198,8 @@ class _ProductDetailWidgetState extends State<ProductDetailScreen> {
                               ],
                             ),
                           ),
-                          if (_supplier.userDisplayName != null)
+                       */
+                          if (widget.product.restaurantName != null)
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   24, 12, 24, 0),
@@ -220,7 +221,7 @@ class _ProductDetailWidgetState extends State<ProductDetailScreen> {
                                         ),
                                   ),
                                   Text(
-                                    _supplier.userDisplayName ?? '',
+                                    widget.product.restaurantName ?? '',
                                     style: Theme.of(context)
                                         .textTheme
                                         .subtitle2!
@@ -234,7 +235,7 @@ class _ProductDetailWidgetState extends State<ProductDetailScreen> {
                                 ],
                               ),
                             ),
-                          if (_supplier.phone != null)
+                          if (widget.product.location != null)
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   24, 12, 24, 0),
@@ -256,7 +257,7 @@ class _ProductDetailWidgetState extends State<ProductDetailScreen> {
                                         ),
                                   ),
                                   Text(
-                                    _supplier.address ?? '',
+                                    widget.product.location ?? '',
                                     style: Theme.of(context)
                                         .textTheme
                                         .subtitle2!
@@ -339,7 +340,8 @@ class _ProductDetailWidgetState extends State<ProductDetailScreen> {
                             String? mes = await FirebaseHelper().addToCart(
                                 widget.product.id!,
                                 ownerId: _supplier.id);
-                            _scaffoldMessengerKey.currentState?.showSnackBar(SnackBar(
+                            _scaffoldMessengerKey.currentState
+                                ?.showSnackBar(SnackBar(
                               content: Text(mes ?? 'Success'),
                             ));
                             setState(() {
@@ -352,7 +354,7 @@ class _ProductDetailWidgetState extends State<ProductDetailScreen> {
                             setState(() {
                               isLoading = false;
                             });
-                           _scaffoldMessengerKey.currentState?.showSnackBar(
+                            _scaffoldMessengerKey.currentState?.showSnackBar(
                               SnackBar(content: Text(e.toString())),
                             );
                           }
