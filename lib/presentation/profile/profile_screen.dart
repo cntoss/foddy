@@ -4,12 +4,12 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:foody/profile/widget/order_screen.dart';
-import 'package:foody/profile/widget/profile_product.dart';
-import 'package:foody/user/model/user_model.dart';
-import 'package:foody/user/ui/user_list_screen.dart';
+import 'package:foody/presentation/profile/widget/order_screen.dart';
+import 'package:foody/presentation/profile/widget/profile_product.dart';
+import 'package:foody/presentation/user/model/user_model.dart';
+import 'package:foody/presentation/user/ui/user_list_screen.dart';
 
-import '../common/app_constant.dart';
+import '../../common/app_constant.dart';
 import '../user/ui/add_user.dart';
 import 'widget/profile_card.dart';
 

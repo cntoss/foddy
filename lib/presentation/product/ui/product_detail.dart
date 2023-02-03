@@ -5,8 +5,8 @@ import 'package:foody/common/app_constant.dart';
 import 'package:foody/core/static_color.dart';
 import 'package:foody/function/firebase_helper.dart';
 import 'package:foody/presentation/cubit/bottom_nav_cubit/bottom_nav_cubit.dart';
-import 'package:foody/product/mode/product_model.dart';
-import 'package:foody/user/model/user_model.dart';
+import 'package:foody/presentation/product/mode/product_model.dart';
+import 'package:foody/presentation/user/model/user_model.dart';
 import 'package:intl/intl.dart';
 
 class ProductDetailScreen extends StatefulWidget {

@@ -1,5 +1,5 @@
 import 'package:foody/function/firebase_helper.dart';
-import 'package:foody/user/model/user_model.dart';
+import 'package:foody/presentation/user/model/user_model.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foody/presentation/checkout/confirmation_screen.dart';
 
-import '../../product/mode/product_model.dart';
+import '../product/mode/product_model.dart';
 
 class PaymentMethodScreen extends StatefulWidget {
   final List<ProductModel> products;

@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:foody/function/firebase_helper.dart';
-import 'package:foody/product/mode/image_model.dart';
-import 'package:foody/product/mode/product_model.dart';
+import 'package:foody/presentation/product/mode/image_model.dart';
+import 'package:foody/presentation/product/mode/product_model.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart' as firebase_core;
 import 'package:flutter/material.dart';

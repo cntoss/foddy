@@ -6,12 +6,12 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:foody/common/app_constant.dart';
 import 'package:foody/presentation/checkout/payment_method.dart';
-import 'package:foody/user/model/user_model.dart';
+import 'package:foody/presentation/user/model/user_model.dart';
 import 'package:foody/utils/toast.dart';
 
 import '../../function/firebase_helper.dart';
-import '../../product/mode/product_model.dart';
-import '../../user/ui/add_user.dart';
+import '../product/mode/product_model.dart';
+import '../user/ui/add_user.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});

@@ -4,8 +4,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import 'package:flutter/material.dart';
-import 'package:foody/product/mode/product_model.dart';
-import 'package:foody/user/model/user_model.dart';
+import 'package:foody/presentation/product/mode/product_model.dart';
+import 'package:foody/presentation/user/model/user_model.dart';
 
 import '../common/app_constant.dart';
 

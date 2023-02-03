@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:foody/common/app_constant.dart';
-import 'package:foody/product/mode/product_model.dart';
-import 'package:foody/product/ui/product_detail.dart';
+import 'package:foody/presentation/product/mode/product_model.dart';
+import 'package:foody/presentation/product/ui/product_detail.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 

@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 // Package imports:
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
-import 'package:foody/profile/profile_screen.dart';
+import 'package:foody/presentation/profile/profile_screen.dart';
 import 'package:foody/utils/logout_helper.dart';
 
-import '../../product/ui/home_screen.dart';
+import '../product/ui/home_screen.dart';
 import '../cart/cart_screen.dart';
 import '../cubit/bottom_nav_cubit/bottom_nav_cubit.dart';
 

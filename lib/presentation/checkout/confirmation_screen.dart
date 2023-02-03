@@ -2,11 +2,11 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:foody/common/app_constant.dart';
-import 'package:foody/user/model/user_model.dart';
+import 'package:foody/presentation/user/model/user_model.dart';
 import 'package:foody/utils/toast.dart';
 
 import '../../function/firebase_helper.dart';
-import '../../product/mode/product_model.dart';
+import '../product/mode/product_model.dart';
 import '../cubit/bottom_nav_cubit/bottom_nav_cubit.dart';
 
 class ConfirmationScreen extends StatefulWidget {

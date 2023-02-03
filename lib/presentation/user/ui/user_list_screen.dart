@@ -1,11 +1,11 @@
 import 'dart:convert';
 
-import 'package:foody/user/model/user_model.dart';
+import 'package:foody/presentation/user/model/user_model.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterfire_ui/database.dart';
 
-import '../../common/app_constant.dart';
+import '../../../common/app_constant.dart';
 
 class UserListScreen extends StatelessWidget {
   const UserListScreen({Key? key}) : super(key: key);

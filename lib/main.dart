@@ -7,7 +7,7 @@ import 'package:foody/auth/auth_gate.dart';
 import 'package:foody/core/static_color.dart';
 import 'package:foody/presentation/cubit/bottom_nav_cubit/bottom_nav_cubit.dart';
 import 'package:foody/presentation/home/main_screen.dart';
-import 'package:foody/product/ui/add_product.dart';
+import 'package:foody/presentation/product/ui/add_product.dart';
 
 import 'core/locator.dart';
 import 'core/theme.dart';
