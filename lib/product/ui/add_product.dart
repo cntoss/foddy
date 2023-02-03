@@ -38,11 +38,11 @@ class _AddProductState extends State<AddProduct> {
     _productDescription = TextEditingController(
         text: widget.product != null ? widget.product!.description : null);
     _addressController = TextEditingController(
-        text: widget.product != null ? widget.product!.location! : null);
+        text: widget.product != null ? widget.product!.location : null);
     _restaurantNameController = TextEditingController(
-        text: widget.product != null ? widget.product!.restaurantName! : null);
+        text: widget.product != null ? widget.product!.restaurantName : null);
     _priceController = TextEditingController(
-        text: widget.product != null ? widget.product!.price! : null);
+        text: widget.product != null ? widget.product!.price : null);
     if (widget.product != null) {
       if (widget.product!.imageUrl != null) {
         image = FileModel(name: widget.product!.imageUrl);

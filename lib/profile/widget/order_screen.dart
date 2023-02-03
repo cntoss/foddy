@@ -53,8 +53,10 @@ class OrderScreen extends StatelessWidget {
                             List<ProductModel> products = [];
                             for (int i = 0; i < productIds.length; i++) {
                               // if (allProducts.firstWhere((element) => element.id == productIds[i])) {
+
                               products.add(allProducts.firstWhere(
-                                  (element) => element.id == productIds[i]));
+                                  (element) => element.id == productIds[i],
+                                  orElse: () => ProductModel()));
                               //}
                             }
                             return products.isEmpty
@@ -66,6 +68,9 @@ class OrderScreen extends StatelessWidget {
                                         shrinkWrap: true,
                                         itemBuilder:
                                             (BuildContext context, int index) {
+                                          if (products[index].id == null) {
+                                            return const SizedBox();
+                                          }
                                           return ListTile(
                                             isThreeLine: true,
                                             title: Column(
