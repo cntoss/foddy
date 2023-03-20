@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:foody/presentation/profile/widget/order_screen.dart';
 import 'package:foody/presentation/profile/widget/profile_product.dart';
 import 'package:foody/presentation/user/model/user_model.dart';
-import 'package:foody/presentation/user/ui/user_list_screen.dart';
 
 import '../../common/app_constant.dart';
 import '../user/ui/add_user.dart';

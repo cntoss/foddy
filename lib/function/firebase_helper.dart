@@ -66,7 +66,6 @@ class FirebaseHelper {
 
   Future<bool> addProduct(ProductModel productModel) async {
     try {
-      //  DataSnapshot userData = await FirebaseDatabase.instance.ref('Products').get();
       DatabaseReference reference =
           FirebaseDatabase.instance.ref().child('Products').push();
       productModel.id = reference.key;

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutterfire_ui/auth.dart';
 import 'package:foody/auth/auth_gate.dart';
-import 'package:foody/core/static_color.dart';
 import 'package:foody/presentation/cubit/bottom_nav_cubit/bottom_nav_cubit.dart';
 import 'package:foody/presentation/home/main_screen.dart';
 import 'package:foody/presentation/product/ui/add_product.dart';
